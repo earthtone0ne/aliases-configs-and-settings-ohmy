@@ -1,0 +1,23 @@
+alias gist='echo && git status'
+alias atom\.='atom .'
+alias cd\.\.='cd ..'
+alias sqlstuff='yarn docker-mysql-conf && yarn docker-mysql-start'
+alias dockfront='yarn docker-frontend-up'
+alias dockweb='yarn docker-webpack-up'
+alias dockback='yarn docker-up'
+checkback() {  
+  echo -e "\033[1m"
+  msg=$(git checkout -)
+  msg=${msg//"M"/"\033[mm"}
+  msg=${msg//"Your"/"\033[mYour"}
+  echo -e "\033E\033[m$msg\033E"
+}
+port() {
+    echo -e "\033ECommand you ran: \033[1mlsof -i:$1\033[m\033E"
+    lsof -i:$1
+    echo
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

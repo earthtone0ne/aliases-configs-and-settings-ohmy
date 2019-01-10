@@ -1,0 +1,32 @@
+#[user]
+#	name = 
+#	email = 
+[color]
+	ui = true
+[alias]
+	st = status --short --branch
+	staash = stash --include-untracked
+	stashm = "!git stash push -m \"$1\" #"
+	stashapply = stash apply stash@{0}
+	stashkeep = stash save --keep-index
+	checkback = checkout -
+	backback = checkout @{-2}
+	checkbackback = checkout @{-2}
+	cm = !git commit -m \"$1\"
+	b = branch
+	newb = "!git checkout -b \"$1\" #" 
+[core]
+	excludesfile = ~/.gitignore_global
+[diff]
+	tool = "sourcetree"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color "status"]
+	branch = cyan normal bold
+[color "checkout"]
+	local = cyan normal bold
+	remote = white normal bold
