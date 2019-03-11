@@ -11,13 +11,14 @@
       "language-coffee-script"
       "language-ruby-on-rails"
       "busy-signal"
+      "prettier-atom"
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 17
+    fontSize: 19
     showIndentGuide: true
   "exception-reporting":
-    userId: ""
+    userId: "f2e39c6c-844c-487a-93e1-561a58b4a134"
   "linter-eslint":
     globalNodePath: "/Users/smarsh/.nvm/versions/node/v8.11.4"
     useGlobalEslint: true
