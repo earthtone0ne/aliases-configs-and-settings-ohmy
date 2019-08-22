@@ -1,0 +1,30 @@
+[user]
+	name = Stephanie Marsh
+	email = smarsh@joor.com
+[color]
+	ui = true
+[alias]
+	st = status --short --branch
+	staash = stash --include-untracked
+	stashm = "!git stash push -m \"$1\" #"
+	stashapply = stash apply stash@{0}
+	stashkeep = stash save --keep-index
+	checkback = checkout -
+	backback = checkout @{-2}
+	checkbackback = checkout @{-2}
+	cm = !git commit -m \"$1\"
+	b = branch
+	newb = "!git checkout -b \"$1\" #" 
+	borrow = "!git merge --no-commit --squash $1 #"
+	thank = blame
+[core]
+	excludesfile = /Users/stephaniemarsh/.gitignore_global
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[color "status"]
+	branch = cyan normal bold
+[color "checkout"]
+	local = cyan normal bold
+	remote = white normal bold
