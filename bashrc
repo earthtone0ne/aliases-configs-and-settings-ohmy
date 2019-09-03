@@ -16,15 +16,19 @@ checkback() {
   msg=${msg//"Your"/"\033[mYour"}
   echo -e "\033E\033[m$msg\033E"
 }
+### AWS
+  export AWS_PROFILE=something
 
 ### Kubernetes 
- alias k="kubectl"
- alias kgc='/usr/local/bin/kubectl config get-contexts'
- alias kuc='/usr/local/bin/kubectl config use-context '
-
- function kns(){
-     kubectl config set-context $(kubectl config current-context) --namespace=$1
- }
+  alias k="kubectl"
+  alias kgc='/usr/local/bin/kubectl config get-contexts'
+  alias kuc='/usr/local/bin/kubectl config use-context '
+  function kns(){
+    kubectl config set-context $(kubectl config current-context) --namespace=$1
+  }
+  function kbash(){
+    kubectl exec -it $1 bash
+  }
 
 ### Docker
 alias dc="docker-compose"
