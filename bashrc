@@ -29,12 +29,30 @@ checkback() {
   function kbash(){
     kubectl exec -it $1 bash
   }
+  function wsgilogs(){
+    kubectl logs -f $1 -c uwsgi-backend
+  }
 
 ### Docker
 alias dc="docker-compose"
 alias dcup="docker-compose up"
 alias dcdown="docker-compose down"
-alias dcb="docker-compose build"
+alias dcbash="dbash"
+function dbash(){
+  if [ ! -f docker-compose.yml ]; then
+    printf "No docker-compose in this folder.\n\033[1;37mdocker-compose exec $1 bash\e[00m\n"
+    # exit 0
+  else
+    docker-compose exec $1 bash
+  fi
+}
+function dcrds(){
+  docker-compose -f docker-compose-shh.yml up $1
+}
+
+### Bash history
+  export HISTSIZE=1000
+  export HISTCONTROL=ignoreboth
 
 ### Bash prompt format
 function prompt {
