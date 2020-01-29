@@ -43,6 +43,9 @@ alias dc="docker-compose"
 alias dcup="docker-compose up"
 alias dcdown="docker-compose down"
 alias dcbash="dbash"
+function drebuild() {
+    docker-compose up -d --no-deps --build $1
+}
 # open a bash prompt for $container; only works in the folder with the compose files.
 function dbash(){
   CONTAINER=""
@@ -94,18 +97,3 @@ function colors {
   echo -e "\033[0mNC (No color)"
   echo -e 
 }
-
-# all the pretty colors
-# C_BLACK="\[\033[0;30m\]"
-# C_RED="\[\033[0;31m\]"
-# C_REDBOLD="\[\033[1;31m\]"
-# C_GREEN="\[\033[0;32m\]"
-# C_GREENBOLD="\[\033[1;32m\]"
-# C_YELLOW="\[\033[0;33m\]"
-# C_YELLOWBOLD="\[\033[1;33m\]"
-# C_BLUE="\[\033[0;34m\]"
-# C_BLUEBOLD="\[\033[1;34m\]"
-# C_PURPLE="\[\033[0;35m\]"
-# C_PURPLEBOLD="\[\033[1;35m\]"
-# C_CYAN="\[\033[0;36m\]"
-# C_CYANBOLD="\[\033[1;36m\]"
