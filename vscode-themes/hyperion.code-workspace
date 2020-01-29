@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "apps/hyperion"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"titleBar.activeForeground": "#e1e2e3",
+			"titleBar.activeBackground": "#03755b",
+			"statusBar.background": "#03755b",
+			"activityBar.background": "#03755b",
+		  }
+	}
+} 

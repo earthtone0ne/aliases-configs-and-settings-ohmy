@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "apps/react"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#0099e560",
+			"activityBar.background": "#0099e560",
+			"titleBar.activeBackground": "#0099e590",
+		  }
+	}
+} 
