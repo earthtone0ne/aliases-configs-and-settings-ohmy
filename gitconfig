@@ -1,6 +1,6 @@
 [user]
 	name = Stephanie Marsh
-	email = stephanie.marsh@fairygodboss.com
+	email = smarsh@joor.com
 [color]
 	ui = true
 [alias]
@@ -16,16 +16,13 @@
 	b = branch
 	newb = "!git checkout -b \"$1\" #" 
 	borrow = "!git merge --no-commit --squash $1 #"
+	thank = blame
 [core]
-	excludesfile = /Users/smarsh/.gitignore_global
+	excludesfile = /Users/stephaniemarsh/.gitignore_global
 [diff]
-	tool = "sourcetree"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [color "status"]
 	branch = cyan normal bold
 [color "checkout"]
