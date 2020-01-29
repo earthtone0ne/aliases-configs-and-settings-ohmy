@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "protos"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#23109170",
+			"activityBar.background": "#23109170",
+			"titleBar.activeBackground": "#231091"
+		  }
+	}
+} 

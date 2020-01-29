@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.pythonPath": ".venv/bin/python3.7",
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#02630280",
+			"activityBar.background": "#02630250",
+			"titleBar.activeBackground": "#026302"
+		},
+		"debug.toolBarLocation": "hidden",
+		"editor.emptySelectionClipboard": false,
+		"editor.selectionHighlight": false
+	}
+}
