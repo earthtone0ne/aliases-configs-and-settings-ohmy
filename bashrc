@@ -60,6 +60,14 @@ function dbash(){
     docker-compose exec $1 bash
   fi
 }
+# 🧽clean all the things
+dclean(){	
+  echo -e "\033[0;31mDocker container prune..." && docker container prune -f;	
+  echo -e "\033[0;33mDocker image prune..." && docker image prune -f;	
+  echo -e "\033[0;32mDocker network prune..." && docker network prune -f;	
+  echo -e "\033[0;34mDocker volume prune..." && docker volume prune -f;
+  echo -e "\033[0m✨🧽✨"	
+}
 
 ### Bash history
   export HISTSIZE=1000
