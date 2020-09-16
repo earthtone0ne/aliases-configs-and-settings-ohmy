@@ -23,9 +23,12 @@ export AWS_PROFILE=something
   alias k="kubectl"
   alias kgc='/usr/local/bin/kubectl config get-contexts'
   alias kuc='/usr/local/bin/kubectl config use-context '
+  # set namespace
   function kns(){
     kubectl config set-context $(kubectl config current-context) --namespace=$1
   }
+  # exec into a pod & get bash prompt; optionally include a container names
+  # example: kbash my-pod-8675309-jny sweet-container
   function kbash(){
     CONTAINER=""
     if [ $# -ge 2 ]
