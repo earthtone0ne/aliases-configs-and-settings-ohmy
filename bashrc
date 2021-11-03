@@ -1,6 +1,8 @@
 alias code\.='code .'
 alias cd\.\.='cd ..'
 
+# prints the process running on the given port and reminds me what the real command is ;)
+# usage: `port 8080`
 port() {
     echo -e "\033ECommand you ran: \033[1mlsof -i:$1\033[m\033E"
     lsof -i:$1
