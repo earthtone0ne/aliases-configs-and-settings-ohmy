@@ -110,3 +110,26 @@ function colors {
   echo -e "\033[0mNC (No color)"
   echo -e 
 }
+
+# Change audio input/output via switchaudio-osx
+# https://github.com/deweller/switchaudio-osx/
+local headset_name="Logitech USB Headset"
+local internal_speaker="MacBook Pro Speakers"
+local internal_mic="MacBook Pro Microphone"
+
+alias headset='SwitchAudioSource -s "{headset_name}"; SwitchAudioSource -s "{headset_name}" -t input;'
+alias speaker='SwitchAudioSource -s "{internal_speaker}"; SwitchAudioSource -s "{internal_mic}" -t input;'
+
+function aud() {
+  if [[ ! -f /usr/local/bin/SwitchAudioSource ]] then
+    return 1
+  fi
+  if [[ -z "$1" ]] then 
+    SwitchAudioSource -n
+    SwitchAudioSource -n -t input
+  elif [[ "$1" == "h" ]] then
+    headset
+  elif [[ "$1" == "s" ]] then
+    speaker
+  fi 
+}
